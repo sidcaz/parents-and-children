@@ -1,25 +1,58 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class Parent extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state= {
+      children: [
+        {
+          header: "first child",
+        },
+      ],
+    };    
+  }
+
+  render() {
+
+    return(
+      <div>
+        <p><b>Hello we made it to our first project!!</b></p>
+        <Child
+          id='1'
+          header="1st child"
+          picture='logo192.png'
+        />
+      </div>
+    )
+  }
 }
 
-export default App;
+
+class Child extends React.Component {
+  constructor(props){
+    super(props);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+  }
+
+  handleButtonClick(){
+    console.log('In this function we want to emit an event to the parent component!!')
+  }
+
+  render() {
+    return(
+      <div>
+        <h1>{this.props.header}</h1>
+        <img src={this.props.picture}/>
+        <button type='button' onClick={this.handleButtonClick}>Action</button>
+      </div>
+    );
+
+  }
+
+}
+
+
+export default Parent;
