@@ -1,70 +1,59 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# React Parents-and-Children Component App
+## Overview
+This React application demonstrates how parent and child components interact using
+**class-based components**. Each child receives props from the parent and can trigger events
+that update its internal state and display messages both in the browser and in the console.
+## Features
+- Two parent components (`Parent` and `Parent2`) each containing a child component.
+- Each child has:
+- A header
+- An image
+- An action button
+- Clicking a button updates a message on the screen and logs it in the browser console.
+## Technologies Used
+- React 19 (Class Components)
+- JavaScript (ES6+)
+- HTML5 / CSS3
+## How It Works
+1. The `Parent` component renders the `Child` component, passing down props such as
+`header` and `picture`.
+2. The `Child` component handles button clicks through the `handleButtonClick()` method.
+3. When the button is pressed, it updates the local state message and logs it to the console.
+## Running the App from Git
+### 1. Clone the Repository
+Open your terminal and clone the project from GitHub:
+```bash
+git clone https://github.com/yourusername/parents-and-children.git
+```
+### 2. Navigate into the Project Directory
+```bash
+cd parents-and-children
+```
+### 3. Install Dependencies
+Run the following command to install all required packages:
+```bash
+npm install
+```
+### 4. Start the React App
+Start the development server with:
+```bash
+npm start
+```
+### 5. Open in Browser
+Once the app compiles, open your browser and go to:
+```
+http://localhost:3000
+```
+## Project Structure
+```
+src/
+│── App.js
+│── index.js
+│── App.css
+│── images/
+│ ├── logo192.png
+│ └── spelman.png
+README.md
+```
+## Author
+Created by **Sidney Cazeno**, Morehouse College — Software Engineering major

@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Parent from './App';
+import { Parent, Parent2 } from "./App";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Parent />
+    <Parent2/>
   </React.StrictMode>
 );
 
